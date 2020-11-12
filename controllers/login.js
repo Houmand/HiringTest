@@ -6,16 +6,16 @@ const register = async (req, res) => {
     try {
         const { email, password } = req.body;
         let user = await User.findOne({ email: email }).exec();
-        if (user){  // Tjek om bruger allerede eksisterer
+        if (user) {  // Tjek om bruger allerede eksisterer
+            console.log("user exists already");
             errors.push("User already registered")
             res.status(500).send("Email already exists")
-        } else{
+        } else {
             const newUser = new User({
                 email: email,
                 password: password,
             });
             //FIXME: password skal krypteres. Ikke forsvarligt design. Rettes hvis der er tid
-
             let result = await newUser.save();  //Gem ny bruger i DB
             console.log(result);
             res.send(result)
