@@ -27,7 +27,7 @@ mongoose.connect("mongodb://localhost/test", {
 }).catch((error) => {
     console.log(error)
 })
-
+ 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
