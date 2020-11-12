@@ -2,12 +2,10 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
-    console.log("register attempt begun");
     try {
         const { email, password } = req.body;
         let user = await User.findOne({ email: email }).exec();
         if (user) {  // Tjek om bruger allerede eksisterer
-            console.log("user exists already");
             errors.push("User already registered")
             res.status(500).send("Email already exists")
         } else {
@@ -27,8 +25,15 @@ const register = async (req, res) => {
 
 }
 
-// const login = async () => {
+const login = async (req, res) => {
+    const { email, password } = req.body;
+    let user = await User.findOne({ email: email, password: password }).exec();
+    if (user) {
+        let token = jwt.sign({ data: JSON.stringify(user) }, "HelloIBM")   // secret bør opbevares andetsteds i sikkerhed. Måske en config-fil.
+        res.send({token});
+    } else {
+        res.status(404).send(e)
+    }
+}
 
-// }
-
-module.exports = { register }
+module.exports = { register, login }
