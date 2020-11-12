@@ -32,7 +32,8 @@ const login = async (req, res) => {
         let token = jwt.sign({ data: JSON.stringify(user) }, "HelloIBM")   // secret bør opbevares andetsteds i sikkerhed. Måske en config-fil.
         res.send({token});
     } else {
-        res.status(404).send(e)
+        console.log("login failed")
+        res.status(404).send()
     }
 }
 

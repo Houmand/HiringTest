@@ -8,10 +8,11 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </header>
 
-<body>
-    <div class="container mt-3 bg-light">
+<body
+    style="background-size: 100% ;background-image: url(https://images-na.ssl-images-amazon.com/images/I/51kMQZVHyML._AC_SL1500_.jpg);">
+    <div class="container mt-5 ">
         <div class="row justify-content-between">
-            <h1 class="m-4">Welcome to the whiteboard!</h1>
+            <h1 class="m-4 mt-5">Welcome to the whiteboard!</h1>
             <div class="col border" id="login-div" style="max-width: 250px">
                 <div class="form-group">
                     <label for="email-input">e-mail</label>
@@ -30,9 +31,92 @@
                 </div>
             </div>
             <div class="col" style="max-width:150px" id="logout-div">
-                <button type="button" id="logout-button"class="btn btn-danger" style="max-width: 110px; max-height: 60px;">Log ud</button>
+                <button type="button" id="logout-button" class="btn btn-danger"
+                    style="max-width: 110px; max-height: 60px;">Log ud</button>
             </div>
         </div>
+    </div>
+
+    <div id="whiteboard-div" class="container">
+        <div id="post-maker-div">
+            <button id="expander-button" type="button" class="btn btn-primary btn-lg plus mb-1" data-toggle="collapse"
+                data-target="#post-maker" aria-expanded="false" aria-controls="post-maker">+</button>
+            <div class="collapse" id="post-maker" style="max-width: 450px; justify-content: center">
+                <div>
+                    <label for="type-input">Hvad vil du dele?</label>
+                    <select class="form-control" id="type-input">
+                        <option>tekst</option>
+                        <option>billede</option>
+                        <option>video</option>
+                    </select>
+                    <div class="form-group">
+                        <textarea class="form-control" id="paste-input" rows="5" placeholder="Indsæt tekst/link her"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" >Del</button>
+                </div>
+            </div>
+        </div>
+        <div id="postit-row" class="row ">
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non porttitor urna. Duis in porta quam.
+                    Ut rutrum auctor nisl, eu rutrum lorem scele
+
+                </h5>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+            <div
+                style="width: 450px; height: 450px; background-size: 450px 450px; background-image: url(https://www.seekpng.com/png/detail/13-136199_note-post-it-reminder-sticky-note-yellow-o.png);">
+                <h5 class=""
+                    style="height: 300px; width: 300px; margin-left: 83px; margin-top: 75px; word-wrap: break-word;">
+                    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    </h1>
+            </div>
+        </div>
+
     </div>
 
     <!-- JQuery -->

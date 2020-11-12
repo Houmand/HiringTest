@@ -1,4 +1,4 @@
-if(document.cookie !== "undefined"){
+if(document.cookie !== "undefined"){  //grimt hack, men undefined oversættes til en streng. Evt. TODO
   console.log("Cookie fundet! Logger ind!")
   console.log({cookie: document.cookie})
   handleLogin();
@@ -6,17 +6,31 @@ if(document.cookie !== "undefined"){
   handleLogout();
 }
 
-instantiateLogoutButton();
-instantiateRegisterButton();
-instantiateLoginButton();
+$("#expander-button").click(()=>{
+  if($("#expander-button").hasClass("plus")){
+    $("#expander-button").text("-")
+    $("#expander-button").toggleClass("plus")
 
-function instantiateLogoutButton() {
+  } else{
+    console.log("it does get in");
+    $("#expander-button").text("+")
+    $("#expander-button").toggleClass("plus")
+
+  }
+})
+
+
+makeLogoutButton();
+makeRegisterButton();
+makeLoginButton();
+
+function makeLogoutButton() {
   $("#logout-button").click(()=>{
     handleLogout();
   })
 }
 
-async function instantiateRegisterButton() {
+async function makeRegisterButton() {
     $("#register-button").click(async () => {
         console.log("register clicked");
 
@@ -40,7 +54,7 @@ async function instantiateRegisterButton() {
     })
 }
 
-async function instantiateLoginButton() {
+async function makeLoginButton() {
     $("#login-button").click(async () => {
         console.log("Login clicked");
 
@@ -63,7 +77,6 @@ async function instantiateLoginButton() {
         let res = await response.json();
 
         document.cookie = res.token
-        console.log(document.cookie);
         handleLogin();
     })
 }
@@ -71,10 +84,12 @@ async function instantiateLoginButton() {
 function handleLogin() {
   $("#login-div").hide()
   $("#logout-div").show()
+  $("#whiteboard-div").show()
 }
 function handleLogout() {
   console.log("handling logout");
   $("#logout-div").hide()
   document.cookie = undefined;
   $("#login-div").show()
+  $("#whiteboard-div").hide()
 }
