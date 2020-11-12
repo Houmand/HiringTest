@@ -9,9 +9,24 @@
 <body>
 
     <div class="container mt-3 bg-light">
-        <div class="row">
-            <h1>Welcome to the whiteboard!</h1>
+        <div class="row justify-content-between">
+            <h1 class="m-4">Welcome to the whiteboard!</h1>
+            <div class="col border" id="login-div" style="max-width: 250px">
+                <div class="form-group">
+                    <label for="email-input">e-mail</label>
+                    <input type="email" class="form-control" placeholder="Mailadresse her" id="email-input" aria-label="email">
+                </div>
+                <div class="form-group">
+                    <label for="password-input">Adgangskode</label>
+                    <input type="password" class="form-control" placeholder="Kode her" id="password-input" aria-label="password">
+                </div>
+                <div class="row m-2 justify-content-between">
+                    <button type="button" id="login-button" class="btn btn-primary">Log ind</button>
+                    <!-- Dårlig practice at registrere i samme vindue, måske bliver der tid til at forfine processen. -->
+                    <button type="button" id="register-button" class="btn btn-secondary">Registrer</button>
 
+                </div>
+            </div>
         </div>
     </div>
 
