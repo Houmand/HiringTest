@@ -168,7 +168,7 @@ async function getAllPosts() {
 
     } else if (post.type === "video") {
       postit.append(
-        $elem("div").addClass("embed-responsive col-md ").css({ "min-width": "300px", "height": "300px", "margin-left": "83px", "margin-top": "75px" })
+        $elem("div").addClass("embed-responsive col-md ").css({ "width": "300px", "height": "300px", "margin-left": "83px", "margin-top": "75px" })
           .append(
             $elem("iframe").addClass("embed-responsive-item embed-responsive-16by9").attr("src", post.data).css({ "width": "300px", "height": "300px" })
             ,
@@ -177,7 +177,7 @@ async function getAllPosts() {
       )
     } else {
       postit.append(
-        $elem("div").css({ "min-width": "300px", "height": "300px", "margin-left": "83px", "margin-top": "75px" }).append(
+        $elem("div").css({ "width": "300px", "height": "300px", "margin-left": "83px", "margin-top": "75px" }).append(
           $elem("h5").html(post.data).css({ "word-break": "break-word" }),
         ),
         $elem("p").html(post.owner).css({ "text-align": "center" })
