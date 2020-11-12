@@ -32,6 +32,7 @@ Server database is in-memory at cloud-foundry, and so is easily lost on restarts
 To link a Youtube video, it needs to be an embedded link - which isn't stated in the UI.
 There is no validation of links for pictures or videos - so prone to user errors.
 Node modules should have been .gitignore'd.
+Because cookies aren't always cleaned, the dirty cookie check to see if you're logged in leaves some new users having to "log out" before registering and logging in.
 
 
 ## How To Run
